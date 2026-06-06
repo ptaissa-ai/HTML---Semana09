@@ -7,6 +7,88 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Menu Superior */
+    .menu-superior {
+      background-color: #2d2d2d;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 50px;
+    }
+    .menu-superior a {
+      color: white;
+      text-decoration: none;
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 50px;
+    }
+    .menu-superior a.active {
+      background-color: #de0000;
+      margin-left: auto; /* Joga o botão SOBRE para a extrema direita */
+      height: 100%;
+      padding: 0 25px;
+    }
+
+    /* Faixa Verde do Instituto Federal */
+    .banner-ifsp {
+      background-color: #00843d; /* Verde oficial do IF */
+      width: 100%;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Container e tamanho da Logo Grande */
+    .logo-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .logo-ifsp {
+      display: block;
+      height: auto;
+      max-height: 120px; /* Ajuste a altura máxima aqui se quiser ainda maior */
+    }
+
+    /* Corpo do Texto */
+    .texto-sobre {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333333;
+    }
+    .texto-sobre p {
+      margin-bottom: 20px;
+    }
+
+    /* Rodapé e Ícones */
+    .rodape-icones {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .icone-facebook {
+      width: 40px;
+      height: auto;
+    }
+    .rodape-site {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
+
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -46,10 +128,10 @@
 function Sobre() {
   return (
     <div class="conteudo-institucional">
-      {/* Banner Principal com a Logo */}
+      {/* Banner Principal com a Logo configurada para logo.jpg */}
       <div class="banner-ifsp">
         <div class="logo-container">
-          <img src="logo-ifsp.png" alt="Instituto Federal São Paulo" class="logo-ifsp" />
+          <img src="logo.jpg" alt="Instituto Federal São Paulo" class="logo-ifsp" />
         </div>
       </div>
 
@@ -72,7 +154,7 @@ function Sobre() {
         </p>
 
         <p>
-          Além dos cursos presenciais, o Instituto Federal de São Paulo oferece os cursos Técnicos em Administração e em Informática para Internet e, a partir de 2012, o superior de Formação de Professores na modalidade de Ensino a Distância (EaD).
+          Além dos cursos presencias, o Instituto Federal de São Paulo oferece os cursos Técnicos em Administração e em Informática para Internet e, a partir de 2012, o superior de Formação de Professores na modalidade de Ensino a Distância (EaD).
         </p>
 
         <p>
