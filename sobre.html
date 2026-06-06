@@ -1,14 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOBRE - IFSP - Pirituba</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- React -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
+
 <body>
 
-    <header id="topo" class="topo">
+<header id="topo" class="topo">
   <nav class="menu-superior">
     <a href="index.html">INÍCIO</a>
     <a href="contato.html">CONTATO</a>
@@ -16,52 +24,78 @@
     <a href="eventos.html">EVENTOS</a>
     <a href="sobre.html">SOBRE</a>
     <a href="inscricao.html">INSCRIÇÃO</a>
-     <a href="entrar.html">ENTRAR</a>
+    <a href="entrar.html">ENTRAR</a>
   </nav>
 </header>
 
-  <main class="pagina">
+<main class="pagina">
 
-    <section class="secao">
+  <div id="sobre-react" class="secao"></div>
+
+  <section class="secao rodape-icones">
+    <a href="#topo">
+      <img src="topo.png" alt="Voltar ao topo" class="icone-topo">
+    </a>
+
+    <a href="https://www.facebook.com/ifsppirituba" target="_blank">
+      <img src="facebook.png" alt="Facebook" class="icone-facebook">
+    </a>
+  </section>
+
+</main>
+
+<footer class="rodape-site">
+  <p><strong>INSTITUTO FEDERAL DE SÃO PAULO - CÂMPUS PIRITUBA</strong></p>
+  <p>Aplicação desenvolvida para a Semana 11 utilizando React</p>
+</footer>
+
+<script type="text/babel">
+
+function Sobre() {
+  return (
+    <div>
       <h1>Sobre</h1>
-      <p>
-        Esta aplicação foi desenvolvida para a Semana 05 de HTML5, mantendo os elementos trabalhados
-        nas aulas anteriores e acrescentando novas páginas com formulários HTML5.
-      </p>
-    </section>
 
-    <section class="secao">
+      <p>
+        O Instituto Federal de Educação, Ciência e Tecnologia de São Paulo
+        é uma autarquia federal de ensino reconhecida pela excelência na
+        educação pública e gratuita.
+      </p>
+
+      <p>
+        Fundado em 1909, o IFSP possui diversos câmpus distribuídos pelo
+        estado de São Paulo e oferece cursos técnicos, superiores,
+        licenciaturas e pós-graduações.
+      </p>
+
+      <p>
+        Esta aplicação foi desenvolvida utilizando HTML5, CSS3,
+        JavaScript e React, mantendo todos os recursos das atividades
+        anteriores.
+      </p>
+
       <h2>Recursos utilizados</h2>
+
       <ol>
-        <li>header</li>
-        <li>nav</li>
-        <li>main</li>
-        <li>section</li>
-        <li>table</li>
-        <li>listas</li>
-        <li>hiperlinks</li>
-        <li>formulários HTML5</li>
-        <li>inputs semânticos</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Formulários HTML5</li>
         <li>GitHub Pages</li>
       </ol>
-    </section>
+    </div>
+  );
+}
 
-    <section class="secao rodape-icones">
-      <a href="#topo">
-        <img src="topo.png" alt="Voltar ao topo" class="icone-topo">
-      </a>
+const root = ReactDOM.createRoot(
+  document.getElementById('sobre-react')
+);
 
-      <a href="https://www.facebook.com/ifsppirituba" target="_blank">
-        <img src="facebook.png" alt="Facebook" class="icone-facebook">
-      </a>
-    </section>
+root.render(<Sobre />);
 
-  </main>
-
-  <footer class="rodape-site">
-    <p><strong>INSTITUTO FEDERAL DE SÃO PAULO - CÂMPUS PIRITUBA</strong></p>
-    <p>Aplicação desenvolvida para a Semana 05 de HTML5</p>
-  </footer>
+</script>
 
 </body>
 </html>
+```
