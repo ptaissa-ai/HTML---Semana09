@@ -14,31 +14,36 @@
       background-color: #ffffff;
     }
 
-    /* Ajuste do Menu Superior conforme a nova imagem */
+    /* Remove qualquer fundo escuro do cabeçalho */
+    header.topo {
+      background-color: #ffffff !important;
+      width: 100%;
+    }
+
+    /* Menu Superior idêntico ao da imagem index (Limpo e Claro) */
     .menu-superior {
       display: flex;
-      justify-content: center; /* Centraliza os links como no modelo */
+      justify-content: center; /* Centraliza os links na tela */
       align-items: center;
-      gap: 25px; /* Espaçamento entre os links */
+      gap: 30px; /* Espaço ideal entre as opções */
       padding: 20px 0;
-      background-color: #ffffff;
-      border-bottom: 3px solid #006633; /* Linha verde abaixo do menu */
+      background-color: #ffffff !important; /* Força o fundo branco */
+      border-bottom: 3px solid #006633; /* Linha verde idêntica abaixo do menu */
     }
 
     .menu-superior a {
-      color: #004d26; /* Verde escuro do texto do menu */
+      color: #004d26 !important; /* Cor exata do texto em verde escuro */
       text-decoration: none;
       font-weight: bold;
       font-size: 14px;
       text-transform: uppercase;
-      transition: color 0.2s;
     }
 
     .menu-superior a:hover {
-      color: #00843d;
+      color: #00843d !important;
     }
 
-    /* Faixa Verde do Instituto Federal */
+    /* Faixa Verde Grande do Instituto Federal */
     .banner-ifsp {
       background-color: #00843d; 
       width: 100%;
@@ -47,7 +52,7 @@
       align-items: center;
     }
 
-    /* Container e tamanho da Logo Grande */
+    /* Container para alinhar a logo grande */
     .logo-container {
       width: 100%;
       max-width: 1200px;
@@ -61,7 +66,7 @@
       max-height: 90px; 
     }
 
-    /* Corpo do Texto */
+    /* Configuração do Corpo do Texto */
     .texto-sobre {
       max-width: 1200px;
       margin: 30px auto;
@@ -75,7 +80,7 @@
       margin-bottom: 20px;
     }
 
-    /* Rodapé e Ícones */
+    /* Rodapé e Redes Sociais */
     .rodape-icones {
       max-width: 1200px;
       margin: 20px auto;
@@ -136,14 +141,14 @@
 function Sobre() {
   return (
     <div class="conteudo-institucional">
-      {/* Banner Principal com a Logo Grande do IFSP */}
+      {/* Banner Verde com a logo.jpg */}
       <div class="banner-ifsp">
         <div class="logo-container">
           <img src="logo.jpg" alt="Instituto Federal São Paulo" class="logo-ifsp" />
         </div>
       </div>
 
-      {/* Corpo do texto extraído exatamente da imagem */}
+      {/* Texto institucional da tela */}
       <div class="texto-sobre">
         <p>
           O <strong>Instituto Federal de Educação, Ciência e Tecnologia de São Paulo</strong> – é uma autarquia federal de ensino.
@@ -166,7 +171,7 @@ function Sobre() {
         </p>
 
         <p>
-          O IFSP é organizado em diversos câmpus e possui mais de 40 mil alunos matriculados nas 36 unidades distribuídas pelo estado de São Paulo.;
+          O IFSP é organized em diversos câmpus e possui mais de 40 mil alunos matriculados nas 36 unidades distribuídas pelo estado de São Paulo.;
         </p>
 
         <p>
