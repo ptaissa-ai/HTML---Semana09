@@ -11,35 +11,38 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #ffffff;
     }
 
-    /* Menu Superior */
+    /* Ajuste do Menu Superior conforme a nova imagem */
     .menu-superior {
-      background-color: #2d2d2d;
       display: flex;
+      justify-content: center; /* Centraliza os links como no modelo */
       align-items: center;
-      justify-content: flex-start;
-      height: 50px;
+      gap: 25px; /* Espaçamento entre os links */
+      padding: 20px 0;
+      background-color: #ffffff;
+      border-bottom: 3px solid #006633; /* Linha verde abaixo do menu */
     }
+
     .menu-superior a {
-      color: white;
+      color: #004d26; /* Verde escuro do texto do menu */
       text-decoration: none;
-      padding: 0 15px;
+      font-weight: bold;
       font-size: 14px;
-      line-height: 50px;
+      text-transform: uppercase;
+      transition: color 0.2s;
     }
-    .menu-superior a.active {
-      background-color: #de0000;
-      margin-left: auto; /* Joga o botão SOBRE para a extrema direita */
-      height: 100%;
-      padding: 0 25px;
+
+    .menu-superior a:hover {
+      color: #00843d;
     }
 
     /* Faixa Verde do Instituto Federal */
     .banner-ifsp {
-      background-color: #00843d; /* Verde oficial do IF */
+      background-color: #00843d; 
       width: 100%;
-      padding: 20px 0;
+      padding: 15px 0;
       display: flex;
       align-items: center;
     }
@@ -51,10 +54,11 @@
       margin: 0 auto;
       padding: 0 20px;
     }
+
     .logo-ifsp {
       display: block;
       height: auto;
-      max-height: 120px; /* Ajuste a altura máxima aqui se quiser ainda maior */
+      max-height: 90px; 
     }
 
     /* Corpo do Texto */
@@ -66,6 +70,7 @@
       line-height: 1.6;
       color: #333333;
     }
+
     .texto-sobre p {
       margin-bottom: 20px;
     }
@@ -76,16 +81,18 @@
       margin: 20px auto;
       padding: 0 20px;
     }
+
     .icone-facebook {
       width: 40px;
       height: auto;
     }
+
     .rodape-site {
       max-width: 1200px;
-      margin: 20px auto;
+      margin: 30px auto 20px auto;
       padding: 0 20px;
       font-size: 13px;
-      color: #555;
+      color: #333333;
     }
   </style>
 
@@ -98,12 +105,13 @@
 
 <header id="topo" class="topo">
   <nav class="menu-superior">
-    <a href="index.html">HOME</a>
-    <a href="eventos.html">EVENTOS</a>
+    <a href="index.html">INÍCIO</a>
     <a href="contato.html">CONTATO</a>
     <a href="cursos.html">CURSOS</a>
+    <a href="eventos.html">EVENTOS</a>
+    <a href="sobre.html">SOBRE</a>
+    <a href="inscricao.html">INSCRIÇÃO</a>
     <a href="entrar.html">ENTRAR</a>
-    <a href="sobre.html" class="active">SOBRE</a>
   </nav>
 </header>
 
@@ -128,7 +136,7 @@
 function Sobre() {
   return (
     <div class="conteudo-institucional">
-      {/* Banner Principal com a Logo configurada para logo.jpg */}
+      {/* Banner Principal com a Logo Grande do IFSP */}
       <div class="banner-ifsp">
         <div class="logo-container">
           <img src="logo.jpg" alt="Instituto Federal São Paulo" class="logo-ifsp" />
@@ -154,7 +162,7 @@ function Sobre() {
         </p>
 
         <p>
-          Além dos cursos presencias, o Instituto Federal de São Paulo oferece os cursos Técnicos em Administração e em Informática para Internet e, a partir de 2012, o superior de Formação de Professores na modalidade de Ensino a Distância (EaD).
+          Além dos cursos presenciais, o Instituto Federal de São Paulo oferece os cursos Técnicos em Administração e em Informática para Internet e, a partir de 2012, o superior de Formação de Professores na modalidade de Ensino a Distância (EaD).
         </p>
 
         <p>
