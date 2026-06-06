@@ -8,96 +8,47 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-    }
-
-    /* Remove qualquer fundo escuro do cabeçalho */
-    header.topo {
+    /* Força o container principal do topo a ficar totalmente branco e remove fundos pretos */
+    header#topo.topo, 
+    header.topo, 
+    #topo {
+      background: #ffffff !important;
       background-color: #ffffff !important;
-      width: 100%;
+      width: 100% !important;
     }
 
-    /* Menu Superior idêntico ao da imagem index (Limpo e Claro) */
-    .menu-superior {
-      display: flex;
-      justify-content: center; /* Centraliza os links na tela */
-      align-items: center;
-      gap: 30px; /* Espaço ideal entre as opções */
-      padding: 20px 0;
-      background-color: #ffffff !important; /* Força o fundo branco */
-      border-bottom: 3px solid #006633; /* Linha verde idêntica abaixo do menu */
+    /* Força a barra de navegação interna a ficar idêntica ao padrão claro do index */
+    nav.menu-superior,
+    header .menu-superior,
+    #topo .menu-superior {
+      display: flex !important;
+      justify-content: center !important; /* Centraliza os itens como no index */
+      align-items: center !important;
+      gap: 25px !important;
+      padding: 20px 0 !important;
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border-bottom: 3px solid #006633 !important; /* Linha verde abaixo do menu */
     }
 
-    .menu-superior a {
-      color: #004d26 !important; /* Cor exata do texto em verde escuro */
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-      text-transform: uppercase;
+    /* Força a cor dos links para o verde escuro padrão do index */
+    nav.menu-superior a,
+    header .menu-superior a,
+    #topo .menu-superior a {
+      color: #004d26 !important; 
+      background: none !important;
+      background-color: transparent !important;
+      text-decoration: none !important;
+      font-weight: bold !important;
+      font-size: 14px !important;
+      text-transform: uppercase !important;
+      padding: 0 !important;
+      margin: 0 !important;
     }
 
-    .menu-superior a:hover {
+    /* Efeito hover sutil nos links */
+    nav.menu-superior a:hover {
       color: #00843d !important;
-    }
-
-    /* Faixa Verde Grande do Instituto Federal */
-    .banner-ifsp {
-      background-color: #00843d; 
-      width: 100%;
-      padding: 15px 0;
-      display: flex;
-      align-items: center;
-    }
-
-    /* Container para alinhar a logo grande */
-    .logo-container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .logo-ifsp {
-      display: block;
-      height: auto;
-      max-height: 90px; 
-    }
-
-    /* Configuração do Corpo do Texto */
-    .texto-sobre {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #333333;
-    }
-
-    .texto-sobre p {
-      margin-bottom: 20px;
-    }
-
-    /* Rodapé e Redes Sociais */
-    .rodape-icones {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-
-    .icone-facebook {
-      width: 40px;
-      height: auto;
-    }
-
-    .rodape-site {
-      max-width: 1200px;
-      margin: 30px auto 20px auto;
-      padding: 0 20px;
-      font-size: 13px;
-      color: #333333;
     }
   </style>
 
@@ -124,15 +75,15 @@
 
   <div id="sobre-react" class="secao"></div>
 
-  <section class="secao rodape-icones">
+  <section class="secao rodape-icones" style={{ maxWidth: '1200px', margin: '20px auto', padding: '0 20px' }}>
     <a href="https://www.facebook.com/ifsppirituba" target="_blank">
-      <img src="facebook.png" alt="Facebook" class="icone-facebook">
+      <img src="facebook.png" alt="Facebook" class="icone-facebook" style={{ width: '40px', height: 'auto' }}>
     </a>
   </section>
 
 </main>
 
-<footer class="rodape-site">
+<footer class="rodape-site" style="max-width: 1200px; margin: 30px auto 20px auto; padding: 0 20px; font-size: 13px; color: #333333;">
   <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100</p>
 </footer>
 
@@ -141,15 +92,15 @@
 function Sobre() {
   return (
     <div class="conteudo-institucional">
-      {/* Banner Verde com a logo.jpg */}
-      <div class="banner-ifsp">
-        <div class="logo-container">
-          <img src="logo.jpg" alt="Instituto Federal São Paulo" class="logo-ifsp" />
+      {/* Faixa Verde com a logo.jpg grande */}
+      <div class="banner-ifsp" style={{ backgroundColor: '#00843d', width: '100%', padding: '15px 0' }}>
+        <div class="logo-container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+          <img src="logo.jpg" alt="Instituto Federal São Paulo" style={{ display: 'block', height: 'auto', maxHeight: '90px' }} />
         </div>
       </div>
 
-      {/* Texto institucional da tela */}
-      <div class="texto-sobre">
+      {/* Texto Institucional oficial */}
+      <div class="texto-sobre" style={{ maxWidth: '1200px', margin: '30px auto', padding: '0 20px', fontSize: '15px', lineHeight: '1.6', color: '#333333' }}>
         <p>
           O <strong>Instituto Federal de Educação, Ciência e Tecnologia de São Paulo</strong> – é uma autarquia federal de ensino.
         </p>
@@ -171,7 +122,7 @@ function Sobre() {
         </p>
 
         <p>
-          O IFSP é organized em diversos câmpus e possui mais de 40 mil alunos matriculados nas 36 unidades distribuídas pelo estado de São Paulo.;
+          O IFSP é organizado em diversos câmpus e possui mais de 40 mil alunos matriculados nas 36 unidades distribuídas pelo estado de São Paulo.;
         </p>
 
         <p>
